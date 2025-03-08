@@ -1,0 +1,15 @@
+{
+  "name": "Plant Health Analyzer",
+  "short_name": "PlantAnalyzer",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f5f5dc",
+  "theme_color": "olive",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

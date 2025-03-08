@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Health Analyzer 🌿</title>
+    
+    <!-- 🌍 PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- 🔹 Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 📜 Service Worker -->
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js").then(() => {
+                console.log("✅ Service Worker Registered!");
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 🌿 Header -->
+    <header>
+        <h1>🌿 Plant Health Analyzer 🍃</h1>
+    </header>
+
+    <!-- 📸 Upload Section -->
+    <section class="upload-section">
+        <h2>📷 Upload Plant Image</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button onclick="analyzeImage()">🔍 Analyze</button>
+        <div id="imagePreview"></div>
+    </section>
+
+    <!-- 🔎 Analysis Result -->
+    <section id="result" class="result-section">
+        No image uploaded yet.
+    </section>
+
+    <!-- 🔘 Separate Buttons -->
+    <section class="buttons-section">
+        <button id="plantNameBtn" disabled>🌱 Show Plant Name</button>
+        <button id="diseaseBtn" disabled>🦠 Show Disease</button>
+        <button id="tipsBtn">🌿 Plant Care Tips</button>
+        <button id="clearBtn">🧹 Clear</button>
+    </section>
+
+    <!-- 🌿 Dynamic Content Sections -->
+    <section id="plantName" class="info-section" style="display: none;"></section>
+    <section id="disease" class="info-section" style="display: none;"></section>
+    <section id="tips" class="info-section" style="display: none;"></section>
+
+    <!-- 🍀 Footer -->
+    <footer>
+        Made with ❤️ for plant lovers 🌿🌱🌸🍃🌻
+    </footer>
+
+    <!-- 🌿 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
